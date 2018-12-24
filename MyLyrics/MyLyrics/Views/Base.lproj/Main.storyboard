@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z7w-Ob-UD8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Lyrics-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="MyLyrics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Artista" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ayY-Vq-Fep">
+                                <rect key="frame" x="90" y="259" width="195.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Título de la canción" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5JN-uH-pNY">
+                                <rect key="frame" x="90" y="221" width="195.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="250" constant="195.5" id="n5j-RU-LGq"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cP3-xf-12o">
+                                <rect key="frame" x="154" y="329" width="67" height="37"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Buscar">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchLyrics:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HUX-YZ-2cP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyLyrics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGy-ZQ-VQ2">
+                                <rect key="frame" x="129.5" y="0.0" width="116" height="33"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <color key="textColor" name="flatLightGrey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="DQq-5D-u9z">
+                                <rect key="frame" x="122.5" y="41" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="8Hu-4a-dTg"/>
+                                    <constraint firstAttribute="height" constant="130" id="BdR-xx-CA8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="flatBlue"/>
+                        <constraints>
+                            <constraint firstItem="cP3-xf-12o" firstAttribute="top" secondItem="ayY-Vq-Fep" secondAttribute="bottom" constant="40" id="6bW-jf-7MW"/>
+                            <constraint firstItem="DQq-5D-u9z" firstAttribute="top" secondItem="pGy-ZQ-VQ2" secondAttribute="bottom" constant="8" id="9GA-pW-Jy8"/>
+                            <constraint firstItem="cP3-xf-12o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A5Z-wn-iTh"/>
+                            <constraint firstItem="pGy-ZQ-VQ2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DbG-wu-9xX"/>
+                            <constraint firstItem="DQq-5D-u9z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IdL-Td-bzv"/>
+                            <constraint firstItem="ayY-Vq-Fep" firstAttribute="top" secondItem="5JN-uH-pNY" secondAttribute="bottom" constant="8" id="VEA-zu-t7e"/>
+                            <constraint firstItem="5JN-uH-pNY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="baZ-Bo-D4f"/>
+                            <constraint firstItem="ayY-Vq-Fep" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cZ2-Em-egs"/>
+                            <constraint firstItem="5JN-uH-pNY" firstAttribute="top" secondItem="DQq-5D-u9z" secondAttribute="bottom" constant="50" id="diK-eU-rBh"/>
+                            <constraint firstItem="pGy-ZQ-VQ2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h3K-BK-4L1"/>
+                            <constraint firstItem="ayY-Vq-Fep" firstAttribute="width" secondItem="5JN-uH-pNY" secondAttribute="width" id="pKk-P6-zJ4"/>
+                            <constraint firstItem="5JN-uH-pNY" firstAttribute="centerX" secondItem="DQq-5D-u9z" secondAttribute="centerX" id="rum-LS-iBf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="gyd-vX-e1j"/>
+                    <navigationItem key="navigationItem" title="My Lyrics" largeTitleDisplayMode="always" id="dtt-bL-uD4"/>
+                    <connections>
+                        <outlet property="artistName" destination="ayY-Vq-Fep" id="Qa6-oG-Vss"/>
+                        <outlet property="songTitle" destination="5JN-uH-pNY" id="CQb-HN-MkK"/>
+                        <segue destination="CiK-o6-C7l" kind="show" identifier="sendLyrics" id="8WD-NL-1sC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1944.8" y="-294.60269865067471"/>
+        </scene>
+        <!--Lyrics View Controller-->
+        <scene sceneID="49s-aB-3Ib">
+            <objects>
+                <viewController id="CiK-o6-C7l" customClass="LyricsViewController" customModule="MyLyrics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A8x-uM-Gk7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mtA-sI-alR">
+                                <rect key="frame" x="16" y="74" width="343" height="452"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" name="flatLightGrey"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2O-tH-FTl">
+                                <rect key="frame" x="119.5" y="0.0" width="136" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" name="flatGrey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q55-Nx-96F">
+                                <rect key="frame" x="167.5" y="545" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="4Td-Cy-vS8"/>
+                                    <constraint firstAttribute="height" constant="40" id="Kua-SG-BQf"/>
+                                </constraints>
+                                <state key="normal" image="SaveIcon">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleSongFromMemory:" destination="CiK-o6-C7l" eventType="touchUpInside" id="cXe-cO-QXL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRl-GW-i3W">
+                                <rect key="frame" x="133.5" y="37" width="108" height="25"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" name="flatGrey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="flatBlue"/>
+                        <constraints>
+                            <constraint firstItem="mtA-sI-alR" firstAttribute="centerX" secondItem="A8x-uM-Gk7" secondAttribute="centerX" id="4HB-nK-sKg"/>
+                            <constraint firstItem="fRl-GW-i3W" firstAttribute="top" secondItem="T2O-tH-FTl" secondAttribute="bottom" constant="8" id="BUB-mD-gd6"/>
+                            <constraint firstItem="rOe-4c-k4F" firstAttribute="bottom" secondItem="q55-Nx-96F" secondAttribute="bottom" constant="18" id="FzH-00-v1h"/>
+                            <constraint firstItem="mtA-sI-alR" firstAttribute="centerX" secondItem="A8x-uM-Gk7" secondAttribute="centerX" id="Gz6-yQ-Esz"/>
+                            <constraint firstItem="q55-Nx-96F" firstAttribute="centerX" secondItem="A8x-uM-Gk7" secondAttribute="centerX" id="L33-In-yie"/>
+                            <constraint firstItem="fRl-GW-i3W" firstAttribute="centerX" secondItem="T2O-tH-FTl" secondAttribute="centerX" id="QHB-DS-K1z"/>
+                            <constraint firstItem="q55-Nx-96F" firstAttribute="top" secondItem="mtA-sI-alR" secondAttribute="bottom" constant="19" id="RNT-EZ-1rN"/>
+                            <constraint firstItem="mtA-sI-alR" firstAttribute="top" secondItem="fRl-GW-i3W" secondAttribute="bottom" constant="12" id="XQf-2h-9sP"/>
+                            <constraint firstItem="T2O-tH-FTl" firstAttribute="centerX" secondItem="A8x-uM-Gk7" secondAttribute="centerX" id="mOI-Fc-eqS"/>
+                            <constraint firstItem="mtA-sI-alR" firstAttribute="leading" secondItem="A8x-uM-Gk7" secondAttribute="leadingMargin" id="oXe-z5-GeY"/>
+                            <constraint firstItem="T2O-tH-FTl" firstAttribute="top" secondItem="rOe-4c-k4F" secondAttribute="top" id="vWH-FC-g9O"/>
+                            <constraint firstItem="mtA-sI-alR" firstAttribute="centerX" secondItem="A8x-uM-Gk7" secondAttribute="centerX" id="x61-Ua-PdH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rOe-4c-k4F"/>
+                    </view>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="T2O-tH-FTl" id="fGl-iR-9y0"/>
+                        <outlet property="saveButton" destination="q55-Nx-96F" id="iuE-QV-2pW"/>
+                        <outlet property="songNameLabel" destination="fRl-GW-i3W" id="YzE-RK-h1w"/>
+                        <outlet property="textView" destination="mtA-sI-alR" id="Uzu-te-lWx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="093-iP-Yok" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2805.5999999999999" y="61.619190404797607"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uYg-OQ-wrN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z7w-Ob-UD8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="7x6-5I-erb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="flatBlue"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pEe-Jq-DkN">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="flatLightGrey"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="JJT-dq-dgi" kind="relationship" relationship="rootViewController" id="Xgd-Hm-ups"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CJu-13-OSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="27"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Kun-LC-e6C">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JJT-dq-dgi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="5Ro-Pf-Mnn"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hvJ-Lk-eA9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="flatGrey"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wis-Vc-oDv"/>
+                        <segue destination="P8f-mG-dzA" kind="relationship" relationship="viewControllers" id="dW4-l0-MFz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3aB-Sj-zAs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.79999999999995" y="26.53673163418291"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="DUY-Wy-bNV">
+            <objects>
+                <tableViewController id="P8f-mG-dzA" customClass="TableViewController" customModule="MyLyrics" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Rk-8X-ecL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="flatBlue"/>
+                        <color key="sectionIndexColor" name="flatLightGrey"/>
+                        <color key="sectionIndexBackgroundColor" name="flatBlue"/>
+                        <color key="sectionIndexTrackingBackgroundColor" name="flatDark"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="50r-dq-qwe">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" name="flatBlue"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="P8f-mG-dzA" id="jLT-TS-eSO"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="songCell" id="fWp-lE-Kb5">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fWp-lE-Kb5" id="pIx-A0-DF8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" name="flatBlue"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="P8f-mG-dzA" id="hgB-AP-n6N"/>
+                            <outlet property="delegate" destination="P8f-mG-dzA" id="1wv-Gd-VTH"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="wzr-Nd-1N6"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="CiK-o6-C7l" kind="show" identifier="seeLyrics" id="u0C-e9-fX3"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8bD-Mx-tcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957" y="391"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SaveIcon" width="192" height="192"/>
+        <image name="logo" width="300" height="300"/>
+        <namedColor name="flatBlue">
+            <color red="0.0" green="0.67843137254901964" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="flatDark">
+            <color red="0.13333333333333333" green="0.15686274509803921" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="flatGrey">
+            <color red="0.22352941176470589" green="0.24313725490196078" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="flatLightGrey">
+            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8WD-NL-1sC"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" name="flatLightGrey"/>
+</document>
